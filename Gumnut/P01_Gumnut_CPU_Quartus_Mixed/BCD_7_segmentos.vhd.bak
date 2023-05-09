@@ -1,0 +1,27 @@
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+ENTITY BCD_7_segmentos IS
+	PORT(
+		x: in STD_LOGIC_VECTOR ( 3 DOWNTO 0);
+		segs: out STD_LOGIC_VECTOR( 6 DOWNTO 0)
+		);
+END BCD_7_segmentos;
+
+architecture Behavioral of BCD_7_segmentos is
+-- 6 5 4 3 2 1 0 1001111
+begin 
+segs <=	"1000000" when (x = "0000") else
+			"1111001" when (x = "0001") else
+			"0100100" when (x = "0011") else
+			"0110000" when (x = "0111") else
+			"0011001" when (x = "1111") else
+			"0010010" when (x = "1110") else
+			"0000010" when (x = "1100") else
+			"1011000" when (x = "1000") else
+			"0000000" when (x = "1010") else
+			"0010000" when (x = "1011") else
+			"1111001" when (x = "1001"); 
+
+end Behavioral;

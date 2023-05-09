@@ -1,0 +1,20 @@
+var express = require('express');
+var app = express();
+app.use(express.json());
+ 
+var games = [
+    {name: 'Elden Ring', id: 1, service: "Steam", installed: "true"},
+    {name: 'League of Legends', id: 2, service: "None", installed: "true"}
+];
+ 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Game List REST api');
+});
+ 
+// Query all games
+// GET
+app.get('/api/games', (req,res)=> {
+    res.json(games);
+});
+ 
+app.listen(5000, () => console.log("Listening on port 5000"));

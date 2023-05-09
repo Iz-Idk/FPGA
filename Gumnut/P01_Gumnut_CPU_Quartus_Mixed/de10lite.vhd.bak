@@ -1,0 +1,47 @@
+LIBRARY 	ieee;
+USE		ieee.std_logic_1164.all;
+
+ENTITY de10lite IS
+	PORT(	
+		CLOCK_50	: 	IN			std_logic;
+		KEY		: 	IN 		std_logic_vector( 1 DOWNTO 0 );
+		SW			: 	IN 		std_logic_vector( 9 DOWNTO 0 );
+		VGA_HS	:	OUT		std_logic;
+		VGA_VS	:	OUT		std_logic;
+		VGA_R		:	OUT		std_logic_vector( 3 DOWNTO 0 );
+		VGA_G		:	OUT		std_logic_vector( 3 DOWNTO 0 );
+		VGA_B		:	OUT		std_logic_vector( 3 DOWNTO 0 );
+		HEX0		:	OUT		std_logic_vector( 7 DOWNTO 0 );
+		LEDR		: 	OUT		std_logic_vector( 9 DOWNTO 0 )
+	);
+END de10lite;
+
+ARCHITECTURE behavior OF de10lite IS	
+	
+	COMPONENT vga_interface IS
+		GENERIC(
+			H_LOW:	natural	:= 96; --Hpulse
+			HBP: 		natural 	:= 48; --HBP
+			H_HIGH:	natural 	:= 640; --Hactive
+			HFP: 		natural  := 16; --HFP
+			V_LOW: 	natural  := 2; --Vpulse
+			VBP: 		natural	:= 33; --VBP
+			V_HIGH: 	natural  := 480; --Vactive
+			VFP: 		natural	:= 10 --VFP
+		); 
+		PORT(
+			clk: 					IN 	std_logic; --50MHz in our board
+			R_switch, G_switch, B_switch:	IN		std_logic;
+			H_sync, V_sync: 	OUT	std_logic;
+			BLANKn, SYNCn : 	OUT	std_logic;
+			R, G, B: 			OUT	std_logic_vector(3 DOWNTO 0)
+		);
+	END COMPONENT;
+	
+	SIGNAL BLANKn, SYNCn:	std_logic;
+	
+BEGIN
+
+		vga1:	vga_interface PORT MAP( CLOCK_50, SW( 2 ), SW( 1 ), SW( 0 ), VGA_HS, VGA_VS, BLANKn, SYNCn, VGA_R( 3 DOWNTO 0 ), VGA_G( 3 DOWNTO 0 ), VGA_B( 3 DOWNTO 0 ) );
+	
+END behavior;

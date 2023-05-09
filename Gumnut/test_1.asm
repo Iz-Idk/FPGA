@@ -1,0 +1,55 @@
+; Main program
+			text 
+			org 0x000
+			jmp main
+
+			data 
+buttom  :   bss 1 		
+leds	:	bss 1 ;port adr 0
+disp7hex:	bss 1 ;port adr 1
+disp7hex2:	bss 1
+
+value_2:	byte 5
+value_3 :   byte 0
+
+			text 
+			org 0x010
+main: 	    ldm r2, value_2
+			stm r2, value_2
+			ldm r3, value_3
+			stm r3, value_3
+
+boton:		inp r1, buttom		
+			jsb delay
+			and r1, r1, 1
+			bnz boton
+			jsb display
+			sub r2, r2, 1
+			sub r0, r2, 0x01
+			bnz boton
+			add r2, r0, 5
+			jmp boton
+			
+display:	out r2, disp7hex
+			out r3, leds
+			out r3, disp7hex2
+			ret
+
+
+;finish:		out r1, leds
+;			out r2, disp7hex
+;			jmp finish
+delay:			add r7, r0, 0
+again3:			add r6, r0, 0
+again2:			add r5, r0, 0
+again1:			add r5, r5, 1
+			sub r0, r5, 0xFF
+			bnz again1
+			add r6, r6, 1
+			sub r0, r6, 0xFF
+			bnz again2
+			add r7, r7, 1
+			sub r0, r7, 0x09
+			bnz again3
+			ret
+

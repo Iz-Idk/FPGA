@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "H_sync_5",
+					"strict" : false
+				},
+				{
+					"name" : "V_sync_5",
+					"strict" : false
+				},
+				{
+					"name" : "R_5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "R_5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "R_5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "R_5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "G_5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "G_5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "G_5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "G_5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B_5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B_5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B_5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B_5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk_5",
+					"strict" : false
+				},
+				{
+					"name" : "y0_5",
+					"strict" : false
+				},
+				{
+					"name" : "y1_5",
+					"strict" : false
+				},
+				{
+					"name" : "x0_5",
+					"strict" : false
+				},
+				{
+					"name" : "x1_5",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

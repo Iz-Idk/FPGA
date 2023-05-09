@@ -1,0 +1,41 @@
+LIBRARY 	ieee;
+USE 		ieee.std_logic_1164.all;
+USE 		ieee.std_logic_arith.all;
+
+
+ENTITY vga_to_monitor IS
+PORT(
+		clk: 					IN 	std_logic; --50MHz in our board
+		R_switch, G_switch, B_switch:	IN		std_logic;
+		H_sync, V_sync: 	OUT	std_logic;
+		BLANKn, SYNCn : 	OUT 	std_logic;
+		R, G, B: 			OUT 	std_logic_vector(3 DOWNTO 0)
+	);
+
+END ENTITY;
+
+
+ARCHITECTURE behavior OF vga_to_monitor IS
+	COMPONENT vga_interface IS
+		GENERIC(
+			H_LOW:	natural	:= 96; --Hpulse
+			HBP: 		natural 	:= 48; --HBP
+			H_HIGH:	natural 	:= 640; --Hactive
+			HFP: 		natural  := 16; --HFP
+			V_LOW: 	natural  := 2; --Vpulse
+			VBP: 		natural	:= 33; --VBP
+			V_HIGH: 	natural  := 480; --Vactive
+			VFP: 		natural	:= 10 --VFP
+		); 
+		PORT(
+			clk: 					IN 	std_logic; --50MHz in our board
+			R_switch, G_switch, B_switch:	IN		std_logic;
+			H_sync, V_sync: 	OUT	std_logic;
+			BLANKn, SYNCn : 	OUT 	std_logic;
+			R, G, B: 			OUT 	std_logic_vector(3 DOWNTO 0)
+		);
+		
+	END COMPONENT;
+
+
+END vga_interface;

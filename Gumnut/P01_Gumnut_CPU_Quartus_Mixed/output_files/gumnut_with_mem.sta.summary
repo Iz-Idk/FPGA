@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -14.188
+TNS   : -23557.373
+
+Type  : Slow 1200mV 85C Model Setup 'clk_5_vga'
+Slack : -4.392
+TNS   : -18.271
+
+Type  : Slow 1200mV 85C Model Setup 'Hsync_5'
+Slack : -2.525
+TNS   : -18.370
+
+Type  : Slow 1200mV 85C Model Hold 'Hsync_5'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_5_vga'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -3236.915
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Hsync_5'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_5_vga'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -13.063
+TNS   : -21475.136
+
+Type  : Slow 1200mV 0C Model Setup 'clk_5_vga'
+Slack : -3.984
+TNS   : -15.742
+
+Type  : Slow 1200mV 0C Model Setup 'Hsync_5'
+Slack : -2.212
+TNS   : -15.724
+
+Type  : Slow 1200mV 0C Model Hold 'Hsync_5'
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_5_vga'
+Slack : 0.582
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -3236.915
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Hsync_5'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_5_vga'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -5.636
+TNS   : -8870.319
+
+Type  : Fast 1200mV 0C Model Setup 'clk_5_vga'
+Slack : -1.250
+TNS   : -2.611
+
+Type  : Fast 1200mV 0C Model Setup 'Hsync_5'
+Slack : -0.406
+TNS   : -1.797
+
+Type  : Fast 1200mV 0C Model Hold 'Hsync_5'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_5_vga'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -2382.052
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Hsync_5'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_5_vga'
+Slack : -1.000
+TNS   : -11.000
+
+------------------------------------------------------------
